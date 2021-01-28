@@ -1,6 +1,14 @@
-﻿
+﻿#include <iostream>
+#include <cmath>
 
-#include <iostream>
+double F(double x); //Функция
+double dF(double x); //Производная функции F
+
+void newton(); //Метод Ньютона
+void divide(); //Метод половинного деления
+void iterations(); //Метод итераций
+
+
 using namespace std;
 int main()
 {
