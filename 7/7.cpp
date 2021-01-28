@@ -36,7 +36,15 @@ double dF(double x)
 
 void newton()
 {
-    //
+    double x1 = ::right, x0;
+
+    do
+    {
+        x0 = x1;
+        x1 = x0 - (F(x0) / dF(x0));
+    } while (abs(x1 - x0) >= eps);
+
+    cout << "Решение методом Ньютона: " << x0 << endl;
 }
 
 void divide()
