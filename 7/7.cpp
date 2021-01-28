@@ -64,5 +64,14 @@ void divide()
 
 void iterations()
 {
-    //
+    double x1 = (::left + ::right) / 2.0;
+    double x2 = x1 + 0.1*F(x1);
+
+    do
+    {
+        x1 = x2;
+        x2 += 0.1*F(x1);
+    } while (abs(x1 - x2) >= eps);
+
+    cout << "Решение методом итераций: " << x1 << endl;
 }
